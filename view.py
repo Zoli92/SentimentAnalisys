@@ -9,13 +9,13 @@ class MainWindow(ttk.Window):
 
         self.current_sentence = ttk.StringVar(value="")
         self.entry = ttk.Entry(master=self, textvariable=self.current_sentence)
-        ttk.Label(master=self, text="Sentiment analisys app", font=("Arial", 12, "bold")).place(x=400, y = 10, anchor="center")
+        ttk.Label(master=self, text="Sentiment analysis app", font=("Arial", 12, "bold")).place(x=400, y = 10, anchor="center")
         self.entry.place(x = 100, y = 50, height = 50, width=600)
         self.button = ttk.Button(master=self, command=self.print_sentiment, text="Get sentiment")
         self.button.place(x = 300, y = 200, height = 40, width = 200)
         self.show()
     def show(self) -> None:
-        self.title("Sentiment analisys")
+        self.title("Sentiment analysis")
         self.resizable(width=False, height=False)
         self.geometry("800x800")
         self.attributes("-topmost", True)
